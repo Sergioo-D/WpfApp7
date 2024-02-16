@@ -1,0 +1,26 @@
+﻿<Window x:Class="WpfApp7.gui.DialogVisita"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp7.gui"
+        mc:Ignorable="d"
+        Title="DialogVisita" Height="477" Width="649">
+    <Grid RenderTransformOrigin="0.783,0.737" Margin="0,0,10,54">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="0*"/>
+        </Grid.RowDefinitions>
+        <Label x:Name="label_pacient" Content="Pacient" HorizontalAlignment="Left" Margin="10,26,0,0" VerticalAlignment="Top" Width="118" Height="26"/>
+        <TextBox Text="{Binding Path=Pacient, NotifyOnValidationError=True , ValidatesOnDataErrors=True}" Validation.Error="Validation_Error" HorizontalAlignment="Left" Margin="159,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="447" Height="57"/>
+        <Label x:Name="label_motiu" Content="Motiu Visita" HorizontalAlignment="Left" Margin="10,101,0,0" VerticalAlignment="Top" Height="26" Width="73"/>
+        <TextBox Text="{Binding Path=Motiu,NotifyOnValidationError=True, ValidatesOnDataErrors=True}" Validation.Error="Validation_Error" HorizontalAlignment="Left" Margin="159,91,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="447" Height="56"/>
+        <Label x:Name="label_data" Content="Data Visita" HorizontalAlignment="Left" Margin="10,189,0,0" VerticalAlignment="Top" Height="26" Width="67"/>
+        <DatePicker SelectedDate="{Binding Path=Data, NotifyOnValidationError=True, ValidatesOnDataErrors=True}" Validation.Error="Validation_Error" HorizontalAlignment="Left" Margin="159,173,0,0" VerticalAlignment="Top" Width="241" Height="57"/>
+        <Button x:Name="button_cancelar" Content="Cancelar" HorizontalAlignment="Left" Margin="44,299,0,0" VerticalAlignment="Top" Width="140" Height="58" Click="button_cancelar_Click" Background="#FFAED9D4"/>
+        <Button x:Name="butto_aceptar" Content="Aceptar" HorizontalAlignment="Left" Margin="333,299,0,0" VerticalAlignment="Top" Width="160" Height="58" Click="butto_aceptar_Click" Background="#FFAED9D4"/>
+        <Label x:Name="LaErr" Content="" HorizontalAlignment="Left" Margin="159,256,0,0" VerticalAlignment="Top" Height="26" Width="382" FontWeight="Bold"/>
+
+
+    </Grid>
+</Window>
